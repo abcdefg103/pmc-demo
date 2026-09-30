@@ -49,7 +49,7 @@ export const board = [
 ]
 
 export function EventCard({ event }: { event: (typeof events)[number] }) {
-  return <article className="overflow-hidden rounded-2xl border border-[#cbd8c8] bg-white"><div className="flex aspect-[16/6] items-center justify-center bg-[#e8f0e5] text-xs font-bold uppercase tracking-[0.2em] text-[#789078]">Event image</div><div className="p-6"><h2 className="text-2xl font-bold text-[#101510]">{event.title}</h2><p className="mt-3 text-sm leading-relaxed text-[#4a554b]">{event.description}</p></div></article>
+  return <article className="flex flex-col gap-5 rounded-2xl border border-[#cbd8c8] bg-white p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6"><div className="min-w-0"><h2 className="text-2xl font-bold text-[#101510]">{event.title}</h2><p className="mt-3 max-w-xl text-sm leading-relaxed text-[#4a554b]">{event.description}</p></div><div className="flex aspect-[4/3] w-full shrink-0 items-center justify-center rounded-xl bg-[#e8f0e5] text-center text-[10px] font-bold uppercase tracking-[0.2em] text-[#789078] sm:w-36">Event image</div></article>
 }
 
 export function BoardCards() {
